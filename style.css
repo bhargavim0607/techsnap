@@ -182,7 +182,7 @@ body{
 #carouselExampleControls{
     background-color:rgb(49, 47, 47);
     margin-bottom: 80px;
-    height: 500px;
+    height: 400px;
     width: 100%;
 }
 .carousel-inner{
@@ -566,9 +566,6 @@ footer .feed:focus{
         width: 220px;
         height: 100px;
     }
-    .carousel-inner{
-        height: 630px;
-    }
     
 } 
 @media screen and (max-width: 998px){
@@ -587,9 +584,6 @@ footer .feed:focus{
     }
     .slide h1{
         padding-top: 0px;
-    }
-    .carousel-inner{
-        height: 470px;
     }
     
 }
@@ -658,9 +652,6 @@ footer .feed:focus{
     .slide p{
         font-size: 15px;
     }
-    .carousel-inner{
-        height: 595px;
-    }
     .growthandmoney #heading{
         padding-left: 8px;
         margin-right: 10px;
@@ -725,3 +716,9 @@ footer .feed:focus{
 
 
 
+@media screen and (max-width: 680px){
+    
+    .carousel-indicators li {
+        margin-top: 350px;
+    }
+}
