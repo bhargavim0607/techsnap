@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 body{
     background-color: black;
-    margin-left: 40px;
     margin-right: 40px;
     margin-top: 20px;
+    width: 100%;
+    overflow-x: hidden;
+    user-select: none;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .navbar .navbar-nav .nav-item  a{
@@ -11,7 +16,6 @@ body{
 }
 .navbar .navbar-nav .nav-item:hover > a,.navbar .navbar-nav .nav-item:link > a{
     color: blue;
-
 }
 
 .navbar .navbar-toggler{
@@ -24,6 +28,7 @@ body{
 }
 
 .register{
+
     padding-right: 25px;
     padding-left: 25px;
     font-size: small;
@@ -34,9 +39,12 @@ body{
     padding-right: 5px;
     padding-left: 5px;
 }
+.home{
+    margin-left: 10px;
+}
 .home .container-large{
-    padding-top: 80px;
-    margin-left: 30px;
+    padding-top: 100px;
+    margin-left: 20px;
     margin-right: 100px;
     padding-bottom: 130px;
 }
@@ -56,7 +64,6 @@ body{
 }
 .startbtn{
     height: 32px;
-    padding-top: 2%;
     border-radius: 25px;
     padding-left: 16px;
     padding-right: 16px;
@@ -139,16 +146,19 @@ body{
 }
 .card{
     background-color: black;
-    color: white;
+    color: blanchedalmond;
 }
 .card-title{
     border-radius: 100%;
     background-color:rgb(49, 47, 47);;
     width: 75px;
     height: 75px;
-    color:white;
-    margin-left:5px;
-    margin-right: 5px;
+    color:blanchedalmond;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+    place-items: center;
 }
 .card-titl{
     color: rgb(190, 190, 190);
@@ -169,18 +179,14 @@ body{
     border-radius: 5%;
 }
 /* career */
-.career{
-    padding-top: 80px;
-}
-.career .carousel{
-    margin-top: 50px;
+#carouselExampleControls{
     background-color:rgb(49, 47, 47);
-    justify-content: space-around;
-    border-radius: 30px;
     margin-bottom: 80px;
+    height: 500px;
+    width: 100%;
 }
 .carousel-inner{
-    height: 450px;
+    height: 500px;
 }
 .carousel-caption{
     color: #fff;
@@ -191,17 +197,11 @@ body{
     font-size: 20px;
   }
 .button{
-    background-color:rgb(90, 90, 228);
-    color: white;
+    background-color:rgb(82, 82, 194);
     border-radius:5px;
-    border: none;
-    width: 120px;
-    height: 40px;
-    
+    width: 100px;
+    height: 30px;
   }
-.button:hover{
-    background-color: rgb(64, 64, 129);
-}
 .slide h1{
     padding-top: 80px;
     font-size: xxx-large;
@@ -305,11 +305,12 @@ body{
     padding-bottom: 20px;
     letter-spacing: 1px;
 }
-.projects .part1 .row .btn{
+.projects .part1  .btn{
     background-color: rgb(201, 109, 125) ;
     color: white;
     padding-left: 30px;
     padding-right: 30px;
+    display: flex;
 }
 .projects .part2 .pcard{
     background-color: #161616;
@@ -377,6 +378,37 @@ body{
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/*Testimonials*/
+.testinomials{
+    margin-left: 10px;
+}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: grey;
+    margin-top: -150px;
+}
+.carousel-indicators .active{
+    background-color: white;
+}
+.carousel-indicators {
+    margin-left: 20%;
+    
+}
+.row .img{
+    height: 5px;
+    border-radius: 100%;
+    width: 5px;
+    padding-top: 5px;
+}
+.testinomials .row .card{
+    font-family:Satisfy;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    height: 320x;
+}
+
 
 /* FreeTutorial */
 .freetutorials{
@@ -488,39 +520,10 @@ body{
 .freetutorials ::placeholder{
     color: white;
 }
-
-/*Testimonials*/
-
-
-
-.carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background-color: grey;
-    margin-top: -150px;
-}
-.carousel-indicators .active{
-    background-color: blue;
-}
-.carousel-indicators {
-    margin-left: 20%;
-    
-}
-.row .img{
-    height: 5px;
-    border-radius: 100%;
-    width: 5px;
-    padding-top: 5px;
-}
-.testinomials .row .card{
-    font-family:Satisfy;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    height: 320x;
-}
-
 /* Footer */
+.page-footer .row .col-xs-6{
+    width: 50%;
+}
 footer{
     height: 400px;
     color: rgb(216, 209, 209);
@@ -548,6 +551,7 @@ footer .feed::placeholder{
 footer .feed:focus{
     background-color: black;
 }
+
 @media screen and (max-width: 1300px) {
     .home .container-large{
         margin-right: 0px;
@@ -562,7 +566,7 @@ footer .feed:focus{
         width: 220px;
         height: 100px;
     }
-    .career .carousel-inner{
+    .carousel-inner{
         height: 630px;
     }
     
@@ -575,14 +579,6 @@ footer .feed:focus{
     .freetutorials .button3{
         margin-top: 10px;
     }
-    .corousel-indicators li{
-        margin-top: 100px;
-    }
-    .testinomials .row .card{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 10px;
-        height: 150px;
-    }
 }
 @media screen and (max-width: 950px){
     .freetutorials .image{
@@ -594,14 +590,6 @@ footer .feed:focus{
     }
     .carousel-inner{
         height: 470px;
-    }
-    .corousel-indicators li{
-        margin-top: 100px;
-    }
-    .testinomials .row .card{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 10px;
-        height: 150px;
     }
     
 }
@@ -628,14 +616,6 @@ footer .feed:focus{
     .slide p{
         font-size: 15px;
     }
-    .corousel-indicators li{
-        margin-top: 200px;
-    }
-    .testinomials .row .card{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 10px;
-        height: 150px;
-    }
     
 } 
 @media screen and (max-width: 765px){
@@ -651,14 +631,6 @@ footer .feed:focus{
         padding-left: 30px;
         padding-right: 40px;
         padding-bottom: 80px;
-    }
-    .corousel-indicators li{
-        margin-top: 150px;
-    }
-    .testinomials .row .card{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 10px;
-        height: 150px;
     }
 } 
 @media screen and (max-width: 575px){
@@ -737,21 +709,19 @@ footer .feed:focus{
         padding-left: 30px;
         padding-right: 30px;
     }
-    .corousel-indicators li{
-        margin-top: 50%;
+    .footerflex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 70px;
     }
-    .owl-corousel{
-        height: 250px;
+    .footerflex1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 70px;
     }
 }  
 
-
-@media screen and (max-width: 2000px){
-    .corousel-indicators li{
-        margin-top: -150px;
-        margin-bottom: 100px;
-    }
-    
-}
 
 
